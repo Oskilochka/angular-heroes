@@ -1,1 +1,19 @@
-<p>heroes works!</p>
+<div class="wrap">
+  <h2 class="title">My heroes</h2>
+
+  <div class="new-hero">
+    <label for="new-hero">Add a new hero</label>
+    <input id="new-hero" #heroName placeholder="Write name here">
+    <button (click)="add(heroName.value); heroName.value=''">Add hero</button>
+  </div>
+
+  <ul class="heroes">
+    <li routerLink="/detail/{{hero.id}}" *ngFor="let hero of heroes">
+      <a>
+        <span class="heroes-id"> {{hero.id}}</span> {{hero.name}}
+      </a>
+      <button (click)="delete(hero)" class="heroes-btn">x</button>
+    </li>
+  </ul>
+
+</div>

@@ -1,0 +1,46 @@
+.wrap {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.title {
+  margin: 30px;
+  text-align: center;
+
+  &-part2 {
+    color: #bd4f14;
+  }
+}
+
+.content {
+  margin: 20px 0px;
+}
+
+.navigation {
+  text-align: center;
+  margin-bottom: 35px;
+
+  & a {
+    text-decoration: none;
+    margin: 3px;
+    font-size: 20px;
+    background-color: #435A60;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+  }
+
+  & a.selected {
+    background-color: red;
+  }
+}
+
+.footer {
+  margin: 20px 0px;
+  text-align: center;
+  font-weight: lighter;
+}
